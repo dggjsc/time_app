@@ -2,7 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/time')
 def hello_world():
     from time import gmtime, strftime
     return strftime("%Y-%m-%d %H:%M:%S", gmtime())
