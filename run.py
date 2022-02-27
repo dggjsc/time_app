@@ -2,8 +2,8 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/<time>')
-def index(time):
+@app.route('/time')
+def time():
     from time import gmtime, strftime
     return strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
